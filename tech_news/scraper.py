@@ -1,6 +1,6 @@
 import requests
 import time 
-import parsel
+# import parsel
 
 
 # Requisito 1
