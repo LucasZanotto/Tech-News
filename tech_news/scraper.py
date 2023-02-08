@@ -72,10 +72,10 @@ def scrape_news(html_content):
     return dict_page
 
 
-if __name__ == '__main__':
-    scrape_news(
-        fetch("https://blog.betrybe.com/noticias/bill-gates-e-cetico-sobre-criptomoedas-e-nfts-entenda-o-motivo/")
-    )
+# if __name__ == '__main__':
+#     scrape_news(
+#         fetch("https://blog.betrybe.com/noticias/bill-gates-e-cetico-sobre-criptomoedas-e-nfts-entenda-o-motivo/")
+#     )
 
 
 #requisito5
