@@ -78,6 +78,6 @@ def scrape_news(html_content):
 #     )
 
 
-#requisito5
+# requisito5
 def get_tech_news(amount):
     """Seu código deve vir aqui"""
