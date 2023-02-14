@@ -21,11 +21,11 @@ def search_by_date(date):
 # Requisito 9
 def search_by_category(category):
     list_search = []
-    search_titles = search_news(
+    search_categories = search_news(
         {"category": category.lower().capitalize()}
     )
-    for info in search_titles:
-        list_search.append((info["category"], info["url"]))
+    for info in search_categories:
+        list_search.append((info["title"], info["url"]))
     return list_search
 
 
