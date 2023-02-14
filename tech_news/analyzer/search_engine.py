@@ -22,11 +22,11 @@ def search_by_date(date):
 def search_by_category(category):
     list_search = []
     search_titles = search_news(
-        {"category": {"$regex": category, "$options": "i"}}
+        {"category": category.lower().capitalize()}
     )
     for info in search_titles:
         list_search.append((info["category"], info["url"]))
     return list_search
 
 
-# print(search_by_category("tecnologia"))
+print(search_by_category("tecnologia"))

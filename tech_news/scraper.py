@@ -100,3 +100,6 @@ def get_tech_news(amount):
     # print(len(list_dict[:amount]))
     create_news(list_dict[:amount])
     return list_dict[:amount]
+
+
+# get_tech_news(33)
