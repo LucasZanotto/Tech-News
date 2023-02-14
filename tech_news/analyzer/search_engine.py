@@ -1,6 +1,16 @@
+from tech_news.database import search_news
+
+
 # Requisito 7
 def search_by_title(title):
-    """Seu código deve vir aqui"""
+    list_search = []
+    search_titles = search_news({"title": {"$regex": title, "$options": "i"}})
+    for info in search_titles:
+        list_search.append((info["title"], info["url"]))
+    return list_search
+
+
+# print(search_by_title("idqwtyu91761dt90d1"))
 
 
 # Requisito 8
@@ -10,4 +20,13 @@ def search_by_date(date):
 
 # Requisito 9
 def search_by_category(category):
-    """Seu código deve vir aqui"""
+    list_search = []
+    search_titles = search_news(
+        {"category": {"$regex": category, "$options": "i"}}
+    )
+    for info in search_titles:
+        list_search.append((info["category"], info["url"]))
+    return list_search
+
+
+# print(search_by_category("tecnologia"))

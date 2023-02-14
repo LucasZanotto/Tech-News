@@ -77,7 +77,7 @@ def get_tech_news(amount):
     count_notices = 0
     next_count = 0
     list_dict = []
-    next_html = ''
+    next_html = ""
     html_content = fetch("https://blog.betrybe.com/")
     page_notices = scrape_updates(html_content)
     count_notices += len(page_notices)
@@ -100,11 +100,3 @@ def get_tech_news(amount):
     # print(len(list_dict[:amount]))
     create_news(list_dict[:amount])
     return list_dict[:amount]
-
-
-if __name__ == "__main__":
-    # print(scrape_updates(fetch('https://blog.betrybe.com/')))
-    # scrape_news(
-    #     fetch("https://blog.betrybe.com/noticias/bill-gates-e-cetico-sobre-criptomoedas-e-nfts-entenda-o-motivo/")
-    # )
-    get_tech_news(33)
